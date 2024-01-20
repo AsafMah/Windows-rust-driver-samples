@@ -1,5 +1,5 @@
 [workspace]
-members = ["general/echo/kmdf/driver/*","general/echo/kmdf/exe"]
+members = ["general/echo/kmdf/driver/*","general/echo/kmdf/exe", "interustceptor/driver"]
 resolver = "2"
 
 [workspace.package]
@@ -17,8 +17,8 @@ panic = "abort"
 lto = true
 
 [workspace.dependencies]
-wdk = "0.1.0"
-wdk-alloc = "0.1.0"
-wdk-build = "0.1.0"
-wdk-panic = "0.1.0"
-wdk-sys = "0.1.0"
+wdk = { version = "0.1.0", path = "../windows-drivers-rs/crates/wdk" }
+wdk-alloc = { version = "0.1.0", path = "../windows-drivers-rs/crates/wdk-alloc" }
+wdk-build = { version = "0.1.0", path = "../windows-drivers-rs/crates/wdk-build" }
+wdk-panic = { version = "0.1.0", path = "../windows-drivers-rs/crates/wdk-panic" }
+wdk-sys = { version = "0.1.0", path = "../windows-drivers-rs/crates/wdk-sys" }
